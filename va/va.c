@@ -71,8 +71,12 @@ int va_parseConfig(char *env, char *env_value)
 
     if (env == NULL)
         return 1;
-    
+
+#ifndef ANDROID
     fp = fopen(SYSCONFDIR "/libva.conf", "r");
+#else
+    fp = fopen("/etc/libva.conf", "r");
+#endif
     while (fp && (fgets(oneline, 1024, fp) != NULL)) {
         if (strlen(oneline) == 1)
             continue;

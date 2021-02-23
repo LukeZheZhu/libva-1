@@ -85,6 +85,7 @@ LOCAL_COPY_HEADERS := \
      va_tpi.h \
      va_trace.h \
      va_dec_av1.h \
+     va_prot.h
 
 LOCAL_COPY_HEADERS_TO := libva/va
 
